@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/hazel-portfolio/static/css/main.7a341393.css",
-    "main.js": "/hazel-portfolio/static/js/main.cb4f8f79.js",
-    "static/media/portfolio-img1.png": "/hazel-portfolio/static/media/portfolio-img1.5feb32787c0a4633d8e5.png",
-    "static/media/portfolio-img2.png": "/hazel-portfolio/static/media/portfolio-img2.83c2807bf6ff2e0a01f6.png",
-    "static/media/about.png": "/hazel-portfolio/static/media/about.de5a30f585c2ee9c5e0d.png",
-    "static/media/portfolio-img3.png": "/hazel-portfolio/static/media/portfolio-img3.2fb2f02208096fc512dd.png",
-    "static/media/site-bg.png": "/hazel-portfolio/static/media/site-bg.bba4e7c8afb6efa06589.png",
-    "static/media/avatar.png": "/hazel-portfolio/static/media/avatar.4c0532990aae2cacf6a1.png",
-    "static/media/LOGO.png": "/hazel-portfolio/static/media/LOGO.5ca9d16c4da26bd51ad2.png",
-    "static/media/revicons.eot": "/hazel-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/hazel-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/hazel-portfolio/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/hazel-portfolio/index.html",
-    "main.7a341393.css.map": "/hazel-portfolio/static/css/main.7a341393.css.map",
-    "main.cb4f8f79.js.map": "/hazel-portfolio/static/js/main.cb4f8f79.js.map"
+    "main.css": "/static/css/main.abcc365f.css",
+    "main.js": "/static/js/main.cafe2060.js",
+    "static/media/portfolio-img1.png": "/static/media/portfolio-img1.5feb32787c0a4633d8e5.png",
+    "static/media/portfolio-img2.png": "/static/media/portfolio-img2.83c2807bf6ff2e0a01f6.png",
+    "static/media/about.png": "/static/media/about.de5a30f585c2ee9c5e0d.png",
+    "static/media/portfolio-img3.png": "/static/media/portfolio-img3.2fb2f02208096fc512dd.png",
+    "static/media/site-bg.png": "/static/media/site-bg.bba4e7c8afb6efa06589.png",
+    "static/media/avatar.png": "/static/media/avatar.4c0532990aae2cacf6a1.png",
+    "static/media/LOGO.png": "/static/media/LOGO.5ca9d16c4da26bd51ad2.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.abcc365f.css.map": "/static/css/main.abcc365f.css.map",
+    "main.cafe2060.js.map": "/static/js/main.cafe2060.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a341393.css",
-    "static/js/main.cb4f8f79.js"
+    "static/css/main.abcc365f.css",
+    "static/js/main.cafe2060.js"
   ]
 }
