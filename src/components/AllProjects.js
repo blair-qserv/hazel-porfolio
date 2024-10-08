@@ -1,8 +1,16 @@
-import React from 'react'
+import { usePdf } from '@mikecousins/react-pdf'
+import React, { useEffect, useRef, useState } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import { useLocation } from 'react-router-dom'
 
 const AllProjects = () => {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
+
   // Define breakpoints for responsiveness
   const responsive = {
     superLargeDesktop: {
@@ -118,6 +126,136 @@ const AllProjects = () => {
       src: 'https://www.dailymotion.com/embed/video/k8nCvYMrv8RR7vBxiCw'
     }
   ]
+
+  const graphics = [
+    {
+      id: 1,
+      src: require('../assets/life1.png')
+    },
+    {
+      id: 2,
+      src: require('../assets/life2.png')
+    },
+    {
+      id: 3,
+      src: require('../assets/life3.png')
+    },
+    {
+      id: 4,
+      src: require('../assets/life4.png')
+    },
+    {
+      id: 5,
+      src: require('../assets/life5.png')
+    },
+    {
+      id: 6,
+      src: require('../assets/life6.png')
+    },
+    {
+      id: 7,
+      src: require('../assets/life7.png')
+    },
+    {
+      id: 8,
+      src: require('../assets/life9.png')
+    }
+  ]
+
+  const graphics2 = [
+    {
+      id: 1,
+      src: require('../assets/grap/IMAGE1.png')
+    },
+    {
+      id: 2,
+      src: require('../assets/grap/IMAGE2.png')
+    },
+    {
+      id: 3,
+      src: require('../assets/grap/IMAGE3.png')
+    },
+    {
+      id: 4,
+      src: require('../assets/grap/IMAGE4.png')
+    },
+    {
+      id: 5,
+      src: require('../assets/grap/IMAGE5.png')
+    },
+    {
+      id: 6,
+      src: require('../assets/grap/IMAGE6.png')
+    },
+    {
+      id: 7,
+      src: require('../assets/grap/IMAGE7.png')
+    },
+    {
+      id: 8,
+      src: require('../assets/grap/IMAGE8.png')
+    },
+    {
+      id: 9,
+      src: require('../assets/grap/IMAGE9.png')
+    },
+    {
+      id: 10,
+      src: require('../assets/grap/IMAGE10.png')
+    }
+  ]
+
+  const graphics3 = [
+    {
+      id: 1,
+      src: require('../assets/graph2/IMAGE11.png')
+    },
+    {
+      id: 2,
+      src: require('../assets/graph2/IMAGE12.png')
+    },
+    {
+      id: 3,
+      src: require('../assets/graph2/IMAGE13.png')
+    },
+    {
+      id: 4,
+      src: require('../assets/graph2/IMAGE14.png')
+    },
+    {
+      id: 5,
+      src: require('../assets/graph2/IMAGE15.png')
+    },
+    {
+      id: 6,
+      src: require('../assets/graph2/IMAGE16.png')
+    },
+    {
+      id: 7,
+      src: require('../assets/graph2/IMAGE17.png')
+    },
+    {
+      id: 8,
+      src: require('../assets/graph2/IMAGE18.png')
+    },
+    {
+      id: 9,
+      src: require('../assets/graph2/IMAGE19.png')
+    },
+    {
+      id: 10,
+      src: require('../assets/graph2/IMAGE20.png')
+    }
+  ]
+
+  const [page, setPage] = useState(1)
+  const canvasRef = useRef(null)
+
+  const { pdfDocument, pdfPage } = usePdf({
+    file: './DentaChew.pdf',
+    page,
+    canvasRef
+  })
 
   return (
     <div>
@@ -290,14 +428,14 @@ const AllProjects = () => {
       <div
         style={{
           color: 'white',
-          height: '100vh',
+          height: '10vh',
           textAlign: 'center',
           alignContent: 'center'
         }}
       >
-        {/* <h1 style={{ fontSize: '6vh' }} className='leading-tight text-accent'>
-          Script Writing
-        </h1> */}
+        <h1 style={{ fontSize: '6vh' }} className='leading-tight text-accent'>
+          Graphic Design
+        </h1>
       </div>
 
       <div
@@ -310,9 +448,9 @@ const AllProjects = () => {
         }}
       >
         {/* First Column */}
-        {/* <div className='video-column'>
+        <div className='video-column'>
           <h2 style={{ fontSize: '3vh' }} className='leading-tight text-black'>
-            Video Sales Letter
+            Beauty
           </h2>
           <Carousel
             responsive={responsive}
@@ -322,9 +460,9 @@ const AllProjects = () => {
             showDots={true}
             arrows={true}
           >
-            {items.map((video) => (
+            {graphics.map((img) => (
               <div
-                key={video.id}
+                key={img.id}
                 style={{
                   padding: '20px',
                   textAlign: 'center',
@@ -333,58 +471,23 @@ const AllProjects = () => {
                   marginTop: '20px'
                 }}
               >
-                <iframe
+                <img
                   width='100%'
                   height='400'
-                  src={video.src}
-                  title={`Video ${video.id}`}
+                  src={img.src}
+                  title={`Image ${img.id}`}
                   allowFullScreen
                 />
               </div>
             ))}
           </Carousel>
-        </div> */}
+        </div>
 
         {/* Second Column */}
-        {/* <div className='video-column'>
-          <h2 style={{ fontSize: '3vh' }} className='leading-tight text-black'>
-            Advertisements
-          </h2>
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            // autoPlay={true}
-            // autoPlaySpeed={2000}
-            showDots={true}
-            arrows={true}
-          >
-            {items.map((video) => (
-              <div
-                key={video.id}
-                style={{
-                  padding: '20px',
-                  textAlign: 'center',
-                  borderRadius: '10px',
-                  border: '2px solid white',
-                  marginTop: '20px'
-                }}
-              >
-                <iframe
-                  width='100%'
-                  height='400'
-                  src={video.src}
-                  title={`Video ${video.id}`}
-                  allowFullScreen
-                />
-              </div>
-            ))}
-          </Carousel>
-        </div> */}
 
-        {/* Third Column */}
-        {/* <div className='video-column'>
+        <div className='video-column'>
           <h2 style={{ fontSize: '3vh' }} className='leading-tight text-black'>
-            Short Ads
+            Lifestyle
           </h2>
           <Carousel
             responsive={responsive}
@@ -394,9 +497,9 @@ const AllProjects = () => {
             showDots={true}
             arrows={true}
           >
-            {items.map((video) => (
+            {graphics2.map((img) => (
               <div
-                key={video.id}
+                key={img.id}
                 style={{
                   padding: '20px',
                   textAlign: 'center',
@@ -405,22 +508,23 @@ const AllProjects = () => {
                   marginTop: '20px'
                 }}
               >
-                <iframe
+                <img
                   width='100%'
                   height='400'
-                  src={video.src}
-                  title={`Video ${video.id}`}
+                  src={img.src}
+                  title={`Image ${img.id}`}
                   allowFullScreen
                 />
               </div>
             ))}
           </Carousel>
-        </div> */}
+        </div>
 
-        {/* Fourth Column */}
-        {/* <div className='video-column'>
+        {/* third Column */}
+
+        <div className='video-column'>
           <h2 style={{ fontSize: '3vh' }} className='leading-tight text-black'>
-            Others
+            Lifestyle
           </h2>
           <Carousel
             responsive={responsive}
@@ -430,9 +534,9 @@ const AllProjects = () => {
             showDots={true}
             arrows={true}
           >
-            {items.map((video) => (
+            {graphics3.map((img) => (
               <div
-                key={video.id}
+                key={img.id}
                 style={{
                   padding: '20px',
                   textAlign: 'center',
@@ -441,18 +545,78 @@ const AllProjects = () => {
                   marginTop: '20px'
                 }}
               >
-                <iframe
+                <img
                   width='100%'
                   height='400'
-                  src={video.src}
-                  title={`Video ${video.id}`}
+                  src={img.src}
+                  title={`Image ${img.id}`}
                   allowFullScreen
                 />
               </div>
             ))}
           </Carousel>
-        </div> */}
+        </div>
       </div>
+      <div
+        style={{
+          color: 'white',
+          height: '10vh',
+          textAlign: 'center',
+          alignContent: 'center'
+        }}
+      >
+        <h1 style={{ fontSize: '6vh' }} className='leading-tight text-accent'>
+          Script Writing
+        </h1>
+      </div>
+
+      <div
+        style={{
+          display: 'grid',
+
+          justifyContent: 'center',
+          padding: 20,
+          textAlign: 'center'
+        }}
+      >
+        <div style={{ mb: '20px' }}>
+          <h2 style={{ fontSize: '3vh' }} className='leading-tight text-black'>
+            Sample Script
+          </h2>
+        </div>
+        <div
+          style={{
+            backgroundColor: 'black',
+            borderRadius: '20px',
+            border: '2px solid black'
+          }}
+        >
+          {!pdfDocument && <span>Loading...</span>}
+          <canvas
+            style={{ height: '80vh', borderRadius: '20px' }}
+            ref={canvasRef}
+          />
+          {Boolean(pdfDocument && pdfDocument.numPages) && (
+            <nav style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div style={{ marginLeft: '20px' }}>
+                <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+                  Previous
+                </button>
+              </div>
+              <div style={{ marginRight: '20px' }}>
+                <button
+                  disabled={page === pdfDocument.numPages}
+                  onClick={() => setPage(page + 1)}
+                >
+                  Next
+                </button>
+              </div>
+            </nav>
+          )}
+        </div>
+      </div>
+
+      {/* script writing end here */}
     </div>
   )
 }
